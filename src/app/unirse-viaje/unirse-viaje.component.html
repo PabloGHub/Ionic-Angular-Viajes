@@ -1,0 +1,23 @@
+<app-encabezado _titulo="Uniser a un Viaje"></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <div class="centrarAlto">
+    <div>
+      <app-campo #campoViaje
+        _texto="ID de Viaje"
+        _tipo="text"
+        _placeholder="Código de Viaje"
+      ></app-campo>
+      <app-campo #campoContra
+        _texto="Contraseña"
+        _tipo="password"
+        _placeholder="********"
+      ></app-campo>
+
+      <ion-button class="centrar boton" (click)="guardar()">Unirse a Viaje</ion-button>
+    </div>
+  </div>
+
+
+</ion-content>
+<app-enpiesado _direcion="/viajes"></app-enpiesado>

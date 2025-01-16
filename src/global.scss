@@ -1,0 +1,118 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+// @import '@ionic/angular/css/palettes/dark.system.css';
+
+ion-content
+{
+  --keyboard-offset: none !important;
+}
+
+.centrar
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Cetral a lo Verticalmente */
+.centrarAlto
+{
+  display: flex;
+  //justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 80vh; /* Altura del contenedor */
+}
+.centrarAlto > *
+{
+  width: 98%;
+  margin-left: 1%;
+}
+
+.alto
+{
+  display: flex;
+  justify-content: center !important; /* Centra horizontalmente */
+  align-items: center !important; /* Centra verticalmente */
+}
+/* Fin Cetral a lo Verticalmente */
+
+/* Texto En Negrita */
+.negrita
+{
+  font-weight: bold;
+}
+
+.negrita > * // ya no negrita
+{
+  font-weight: normal;
+}
+/* Fin Texto En Negrita */
+
+/* Estandar de mi Boton principal */
+.boton
+{
+  width: 90%;
+  margin-left: 5%;
+  color: #f6f7f9;
+}
+/* Fin Boton ppal */
+
+
+/* Estandar BotonCard (son ion-cards)*/
+.botonCard
+{
+  width: 90%;
+  margin-left: 5%;
+  color: #f6f7f9;
+  background-color: #17849B;
+  cursor: pointer;
+}
+.botonCard > ion-card-header > ion-card-title
+{
+  font-weight: bold;
+}
+.botonCard > ion-card-header > ion-card-subtitle
+{
+  color: #FFF;
+}
+/* Fin BotonCard */
+
+
+.colorTexto
+{
+  color: #17849B;
+}

@@ -1,0 +1,34 @@
+<app-encabezado _titulo='{{_titulo}}'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <div class="centrarAlto">
+    <div>
+
+      <app-campo #campoNombre
+        _texto="Nombre del Viaje"
+        _tipo="text"
+        _placeholder="Viajes a un lugar maravilloso"
+        _valor="{{_valorNombre}}"
+      ></app-campo>
+      <app-campo #campoDes
+        _texto="Descripcion"
+        _tipo="text"
+        _placeholder="descripcion"
+        _valor="{{_valorDescripcion}}"
+      ></app-campo>
+      <app-campo #campoContra
+        _texto="Contraseña"
+        _tipo="text"
+        _placeholder="********"
+        _valor="{{_valorContrasenna}}"
+      ></app-campo>
+
+      <p *ngIf="_accion === 'editar'" class="centrar colorTexto">ID: {{_idViaje}}</p>
+
+      <ion-button class="centrar boton" (click)="guardar()">{{_btn}}</ion-button>
+
+    </div>
+  </div>
+
+</ion-content>
+<app-enpiesado _direcion='{{_direccion}}' ></app-enpiesado>

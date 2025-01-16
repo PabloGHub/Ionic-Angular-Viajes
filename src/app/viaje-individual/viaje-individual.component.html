@@ -1,0 +1,18 @@
+<app-encabezado _titulo='{{ _titulo }}'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <hr>
+  <ion-button class="boton centrar" [routerLink]="['/gestionar-viaje', _accion]">Administrar</ion-button>
+  <ion-button class="boton centrar" routerLink="/actividades">Actividades</ion-button>
+
+  <app-label _texto="------------ Participantes ------------" ></app-label>
+
+  <app-boton-tarjeta *ngFor="let _usu of _usuarios"
+    _titulo="{{_usu._nombre}}"
+    _descrpcion="El usuario debe X€"
+    _direccion="/perfil/{{_usu._idPerfil}}"
+  ></app-boton-tarjeta>
+
+
+</ion-content>
+<app-enpiesado _direcion='/viajes'></app-enpiesado>

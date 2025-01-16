@@ -1,0 +1,25 @@
+<app-encabezado _titulo='Inicio Sesion'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+
+  <hr>
+  <ion-img
+    src="assets/ima/Logo_Chico.png"
+    alt="logo"
+    style="max-height: 50cap; max-width: 50cap;"
+    class="centrar"
+  ></ion-img> <!-- style="width: 4cap; height: 4cap;" -->
+  <hr>
+
+  <!-- jaja xd -->
+  <!-- <app-campo _texto="Correo" _tipo="email" _placeholder="ejemplo@mail.com"></app-campo> -->
+
+  <app-campo #nombreCampo _texto="Nombre/Nick" _tipo="text" _placeholder="Persona"></app-campo>
+  <app-campo #contrasennaCampo _texto="Contraseña" _tipo="password" _placeholder="********"></app-campo>
+
+  <ion-button class="boton" (click)="inicioSesion()">Iniciar Sesion</ion-button>
+  <ion-button class="boton" routerLink="/viajes">Cree una cuenta (Debug: no funca)</ion-button>
+
+
+</ion-content>
+<app-enpiesado></app-enpiesado>

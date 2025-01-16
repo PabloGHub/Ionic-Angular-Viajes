@@ -1,0 +1,25 @@
+<app-encabezado _titulo='Viajes'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button class="centrar" [routerLink]="['/gestionar-viaje', _accion]">Crear Viaje</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button class="centrar" routerLink="/unise-viaje">Unirse Viaje</ion-button>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+
+  <app-boton-tarjeta *ngFor="let v of _viajes"
+      _titulo="{{v._nombre}}"
+      _descrpcion="{{v._descripcion}}"
+      (click)="irViaje(v._idViaje ?? 0)"
+  ></app-boton-tarjeta>
+
+
+
+</ion-content>
+<app-enpiesado _direcion='/home'></app-enpiesado>

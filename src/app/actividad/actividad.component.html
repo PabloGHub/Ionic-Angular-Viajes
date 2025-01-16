@@ -1,0 +1,70 @@
+<app-encabezado _titulo='{{_titulo}}'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <div class="centrarAlto">
+    <div>
+
+      <app-campo #campoTitulo
+        _texto='Titulo'
+        _tipo="text"
+        _placeholder='Titulo de la actividad'
+        _valor="{{_tituloActividad}}"
+      ></app-campo>
+      <app-campo #campoDescripcion
+        _texto='Descripcion'
+        _tipo="text"
+        _placeholder='Descripcion de la actividad'
+        _valor="{{_descripcionActividad}}"
+      ></app-campo>
+      <app-campo #campoPrecio
+        _texto='Precio'
+        _tipo="number"
+        _placeholder='Precio de la actividad'
+        _valor="{{_precioActividad}}"
+      ></app-campo>
+      <app-campo #campoFecha
+        _texto='Fecha'
+        _tipo="date"
+        _valor='{{_fechaActividad}}'
+      ></app-campo>
+
+      <ion-grid> <!--  GRID -->
+
+        <ion-row *ngIf="_accion === 'editar'">
+          <ion-col>
+            <ion-button class="boton" (click)="votarPositivo()">me gusta</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button class="boton" (click)="votarNegativo()">no me gusta</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="_accion === 'editar'">
+          <ion-col>
+            <app-label _css="centrar" _texto="{{_megustas}}"></app-label>
+          </ion-col>
+          <ion-col>
+            <app-label _css="centrar" _texto="{{_rechazar}}"></app-label>
+          </ion-col>
+        </ion-row>
+
+        <!-- TODO: Hacer que funcione en editar para guardar. -->
+        <!-- TODO: Hacer que cuando le des no puedas guardar dos iguales. -->
+        <!-- TODO: Quitar el routerLink para hacerlo en el .ts -->
+        <ion-row *ngIf="_accion === 'crear'">
+          <ion-col>
+            <ion-button class="boton" (click)="guardar()">Crear Actividad</ion-button>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+
+
+
+
+    </div>
+  </div>
+
+</ion-content>
+<app-enpiesado _direcion='/actividades'></app-enpiesado>

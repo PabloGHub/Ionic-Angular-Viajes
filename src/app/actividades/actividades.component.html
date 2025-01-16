@@ -1,0 +1,16 @@
+<app-encabezado _titulo='Actividades'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <hr>
+  <ion-button class="boton" [routerLink]="['/actividad', 'crear', '']">Crear Actividad</ion-button>
+
+
+  <app-boton-tarjeta *ngFor="let _act of _actividades"
+    _titulo="{{_act._titulo}}"
+    _descrpcion="{{_act._descripcion}}"
+    [routerLink]="['/actividad', 'editar', JSON.stringify(_act)]"
+  ></app-boton-tarjeta>
+
+
+</ion-content>
+<app-enpiesado _direcion="/viaje-individual"></app-enpiesado>

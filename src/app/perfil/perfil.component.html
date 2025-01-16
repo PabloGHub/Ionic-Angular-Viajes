@@ -1,0 +1,31 @@
+<app-encabezado _titulo='{{_usuario._nombre}}'></app-encabezado>
+<ion-content [fullscreen]="true">
+
+  <app-label _css="negrita" _texto="{{_usuario._nombre}}" ></app-label>
+
+  <ion-button
+    *ngIf="_tu"
+    color="danger"
+    class="boton"
+    (click)="eliminarParticipante()"
+  >Salirse</ion-button>
+
+  <app-label _texto="------------ Actividades Realizadas ------------" ></app-label>
+
+  <!-- TODO: poner _btnContenido Solo en caso de que _tu sea True. -->
+  <app-boton-tarjeta *ngFor="let _act of _actividades"
+     _titulo="{{_act._titulo}}"
+     _descrpcion="{{_act._descripcion}}"
+     [routerLink]="['/actividad', 'editar']"
+     _btnContenido1="Pagado"
+  ></app-boton-tarjeta>
+
+  <app-label _texto="------------ Amigos ------------" ></app-label>
+
+  <app-boton-tarjeta *ngFor="let _usu of _amigos"
+     _titulo="{{_usu._nombre}}"
+     _direccion="/perfil"
+  ></app-boton-tarjeta>
+
+</ion-content>
+<app-enpiesado _direcion="/viaje-individual"></app-enpiesado>

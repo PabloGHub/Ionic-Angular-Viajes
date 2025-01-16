@@ -1,0 +1,42 @@
+<ion-footer [translucent]="true">
+  <ion-toolbar>
+
+    <ion-grid>
+      <ion-row>
+
+        <!--
+         <ion-col size="0.5">
+              <ion-icon name="arrow-back-outline" [routerDirection]="_direcion"></ion-icon>
+        </ion-col>
+         -->
+
+
+        <ion-col *ngIf="_direcion !== ''">
+          <ion-icon name="arrow-back-outline" routerLink="{{ _direcion }}"></ion-icon>
+        </ion-col>
+
+        <!-- TODO: Cambiar logo por avion representando viajes -->
+        <ion-col>
+          <ion-icon name="home-outline" routerLink="{{ _inicio }}"></ion-icon>
+        </ion-col>
+
+        <!-- TODO: Que aparecezca cuando esta cuando estes mas aya de actividades para ir a actividades -->
+        <ion-col>
+          <ion-icon name="clipboard-outline"></ion-icon>
+        </ion-col>
+
+        <!--
+        <ion-col>
+          <ion-icon name="location-outline"></ion-icon>
+        </ion-col>
+
+        <ion-col>
+          <ion-icon name="folder-outline"></ion-icon>
+        </ion-col>
+        -->
+
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+</ion-footer>
